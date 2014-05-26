@@ -30,7 +30,7 @@ public class insertPersonalizado {
 		
 		
 		for(int j=1; j<i;j++){
-			System.out.println("INSERT INTO "+s[0]+" VALUES ("+s[j]+");");
+			System.out.println("INSERT INTO "+s[0]+" VALUES (IdEstacion.NEXTVAL"+s[j]+");");
 		}
 		
 		
