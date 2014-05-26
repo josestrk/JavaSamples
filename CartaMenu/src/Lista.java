@@ -21,7 +21,7 @@ private Nodo txtIni;
 		Nodo aux=txtIni;
 		
 		while (aux!=null){
-			t.suma(aux.getInfo().tiemporPreparacion);
+			t.suma(aux.getInfo().getTiempoPreparacion());
 			aux.getSig();
 		}
 		return t;
