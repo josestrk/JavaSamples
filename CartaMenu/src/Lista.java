@@ -1,3 +1,7 @@
+/*
+ * Es la lista de pasos de la receta 
+ * Contiene un metodo suma en el cual se cuenta el tiempo en realizar cada paso de la lista
+ * */
 
 public class Lista {
 private Nodo txtIni;

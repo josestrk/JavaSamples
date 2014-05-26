@@ -1,5 +1,13 @@
-
-
+/*
+ * Las recetas se componen de
+ * ingredientes array con los nombres de ingredirentes
+ * Lista enlazada de pasos para la preparación
+ * Nombre de la receta
+ * * Ejemplo:
+ * 1. macarrones con tomate
+ * 2. [macarrones],[agua],[tomate]
+ * 3. lista -> verter [agua,0:10]->[verter en agua los macarrones,0:8]-> 
+ * */
 
 public class Receta {
 	String nombre;
@@ -28,12 +36,12 @@ public class Receta {
 		this.ingredientes = ingredientes;
 	}
 
-	public Lista getPasosPrecaucion() {
+	public Lista getPasosPreparacion() {
 		return pasosPreparacion;
 	}
 
-	public void setPasosPrecaucion(Lista pasosPrecaucion) {
-		this.pasosPreparacion = pasosPrecaucion;
+	public void setPasosPreparacion(Lista PasosPreparacion) {
+		this.pasosPreparacion = PasosPreparacion;
 	}
 	
 	public Tiempo tiempoTotal(){

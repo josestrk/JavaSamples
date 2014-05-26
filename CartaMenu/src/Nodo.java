@@ -1,5 +1,6 @@
 
 public class Nodo {
+	// Es un nodo estandard. En info introduce pasos de las recetas
 	private Paso info;
 	private Nodo sig;
 	
