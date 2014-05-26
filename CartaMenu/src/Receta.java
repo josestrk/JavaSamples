@@ -4,12 +4,12 @@
 public class Receta {
 	String nombre;
 	String[] ingredientes;
-	Lista pasosPrecaucion;
+	Lista pasosPreparacion;
 	
 	Receta(){
 		nombre="";
 		ingredientes=new String[100];
-		pasosPrecaucion=new Lista();
+		pasosPreparacion=new Lista();
 	}
 
 	public String getNombre() {
@@ -29,16 +29,16 @@ public class Receta {
 	}
 
 	public Lista getPasosPrecaucion() {
-		return pasosPrecaucion;
+		return pasosPreparacion;
 	}
 
 	public void setPasosPrecaucion(Lista pasosPrecaucion) {
-		this.pasosPrecaucion = pasosPrecaucion;
+		this.pasosPreparacion = pasosPrecaucion;
 	}
 	
 	public Tiempo tiempoTotal(){
 		Tiempo t=new Tiempo();
-		
+		pasosPreparacion.TiempoTotal();
 		return t;
 	}
 }
