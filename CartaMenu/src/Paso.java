@@ -25,7 +25,7 @@ public class Paso {
 	
 	public void setTiempoPreparacion(Tiempo t){
 		this.tiempoPreparacion.setH(t.getH());//pones la hora de 'tiempo' desde el getter de el tiempo que te meten
-		this.tiempoPreparacion.setM(t.getM());//meaburro
+		this.tiempoPreparacion.setM(t.getM());//estableces los minutos con los getters ya que no se puede con iguales=
 	}
 	
 }
