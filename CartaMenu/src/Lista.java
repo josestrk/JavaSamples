@@ -18,6 +18,12 @@ private Nodo txtIni;
 
 	public Tiempo TiempoTotal(){
 		Tiempo t=new Tiempo(); 
+		Nodo aux=txtIni;
+		
+		while (aux!=null){
+			t.suma(aux.getInfo().tiemporPreparacion);
+			aux.getSig();
+		}
 		return t;
 	}
 }
