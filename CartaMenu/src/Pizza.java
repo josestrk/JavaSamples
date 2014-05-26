@@ -2,24 +2,24 @@
 public class Pizza extends Receta implements FastFoodeable {
 	
 	public Pizza(){
-		super();
+		super();//se llama al creador del que hereda, es decir, el creador de Receta
 	}
 	
 	@Override
 	public Tiempo tiempoPreparacion() {
-		// TODO Auto-generated method stub
+		// Se establece este metodo por la interfaz fastfoodeable 'sinhacer'
 		return null;
 	}
 
 	@Override
 	public boolean isVegetariano() {
-		// TODO Auto-generated method stub
+		// Se establece este metodo por la interfaz fastfoodeable'sinhacer'
 		return false;
 	}
 
 	@Override
 	public Preparacion tipoPrearacion() {
-		// TODO Auto-generated method stub
+		// Se establece este metodo por la interfaz fastfoodeable'sinhacer'
 		return null;
 	}
 	
