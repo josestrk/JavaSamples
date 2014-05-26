@@ -13,6 +13,22 @@ public class Tiempo {
 		this.m=m;
 	}
 	
+	public int getH() {
+		return h;
+	}
+
+	public void setH(int h) {
+		this.h = h;
+	}
+
+	public int getM() {
+		return m;
+	}
+
+	public void setM(int m) {
+		this.m = m;
+	}
+
 	public Tiempo(Tiempo tiempoTotal) {
 		this.h=tiempoTotal.h;
 		this.m=tiempoTotal.m;
