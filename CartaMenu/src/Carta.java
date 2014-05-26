@@ -9,10 +9,14 @@ public class Carta {
 	}
 	
 	public void add(DiaSemana dia,Menu m){
+		//introducimos en el map una lista que contenga dias de la semana y y el menu del dia
+		//ya sea un sandwich pizza o lo que sea
 		carta.put(dia,m);
 	}
 	
-	public Tiempo tiempoMendioMenu(DiaSemana diaS){
+	//queremos calcular el tiempo que nos lleva hacer un menu cada dia
+	public Tiempo tiempoMedioMenu(DiaSemana diaS){
+		
 		Tiempo t = new Tiempo(carta.get(diaS).tiempoTotal());
 		return t;
 	}

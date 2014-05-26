@@ -1,5 +1,8 @@
 
 public class Sandwich extends Receta implements FastFoodeable {
+	private Tiempo tiempoTreparacion;
+	private boolean isVegetariano;
+	private Preparacion tipoPreparacion; 
 	
 	public Sandwich(){
 		super();//se llama al creador de receta
@@ -18,7 +21,7 @@ public class Sandwich extends Receta implements FastFoodeable {
 	}
 
 	@Override
-	public Preparacion tipoPrearacion() {
+	public Preparacion tipoPreparacion() {
 		// Se establece este metodo por la interfaz fastfoodeable 'sinhacer'
 		return null;
 	}

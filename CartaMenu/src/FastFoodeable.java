@@ -1,6 +1,6 @@
 
 public interface FastFoodeable {
-	public Tiempo tiempoPreparacion();
+	public Tiempo tiempoPreparacion();//creemos que este metodo no tiene sentido
 	public boolean isVegetariano();
-	public Preparacion tipoPrearacion();
+	public Preparacion tipoPreparacion();
 }
