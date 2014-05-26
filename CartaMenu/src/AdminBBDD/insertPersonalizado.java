@@ -17,7 +17,7 @@ public class insertPersonalizado {
 		i++;
 		
 		while(a){
-			System.out.println("Introduzca Nombre de fila Si desea salir? (S/N)");
+			System.out.println("Introduzca Nombre de fila si desea salir ->(S/N)");
 			escaner=sca.next();
 			if(escaner.equals("S") || escaner.equals("s") ){
 				a=false;
@@ -30,7 +30,7 @@ public class insertPersonalizado {
 		
 		
 		for(int j=1; j<i;j++){
-			System.out.println("INSERT INTO "+s[0]+" VALUES (IdEstacion.NEXTVAL"+s[j]+");");
+			System.out.println("INSERT INTO "+s[0]+" VALUES (IdEstacion.NEXTVAL, "+s[j]+");");
 		}
 		
 		
