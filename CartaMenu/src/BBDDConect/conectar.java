@@ -25,7 +25,7 @@ public class conectar {
 			
 			System.out.println("Quito: ");
 			try{
-				stmt.executeUpdate("DELETE FROM estaciones WHERE IdEstacion=765");
+				stmt.executeUpdate("DELETE FROM estaciones WHERE IdEstacion=765 ");
 			}catch (SQLException e){
 				System.out.println("No QUITAS");
 			}
