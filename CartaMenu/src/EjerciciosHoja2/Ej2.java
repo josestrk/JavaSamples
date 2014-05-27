@@ -24,7 +24,7 @@ public class Ej2 {
 			switch(opc){
 			case 1: System.out.println("Introdiuce numero n del que desea saber divisores:");n=tcl.nextInt(); ejer1(a,n);break;
 			case 2: System.out.println("Introdiuce numero n del que desea saber divisores primos1:");n=tcl.nextInt(); ejer2(a,n);break;
-			case 3: System.out.println("Se crean 100 números aleatorios y dirá si están repetidos");ejer3(a, tam);;break;
+			case 3: System.out.println("Se crean 100 números aleatorios y dirá si están repetidos");ejer3(a, tam);break;
 			case 4:
 				System.out.println("Indique tamaño del array al que asociarle numeros random:");
 				tam=tcl.nextInt();
