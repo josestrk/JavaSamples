@@ -23,7 +23,7 @@ public class conectar {
 			
 			mostrar("estaciones");
 			
-			System.out.println("Quito:");
+			System.out.println("Quito: ");
 			try{
 				stmt.executeUpdate("DELETE FROM estaciones WHERE IdEstacion=765");
 			}catch (SQLException e){
