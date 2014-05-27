@@ -1,6 +1,8 @@
 package Vuelos;
 
-public class Vuelo {
+import java.util.Comparator;
+
+public class Vuelo{
 	private int numVuelo;
 	private String destino;
 	private Fecha fecha;
@@ -52,5 +54,10 @@ public class Vuelo {
 		this.hora = hora;
 	}
 	
+	@Override
+	public String toString() {
+		return "Vuelo [nV:" + numVuelo + "\t D:" + destino
+				+ "\t>>>\t" + fecha + "," + hora + "]";
+	}
 	
 }
