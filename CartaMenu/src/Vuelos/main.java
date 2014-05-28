@@ -51,12 +51,13 @@ public class main {
 			System.out.println(t1[i].toString());
 		}	
 	}
-	// como llamo a comparator=????
+	// Muy importante metodo de ordenación con COMPARATOR
+
 	public static void ordenar(Comparator c,Vuelo[] a1,int n){
 		int i,j;
 		Vuelo aux=null;
 		for(i=0;i<n;i++){
-			for(j=i;j<n-1;j++){
+			for(j=0;j<n-i-1;j++){
 				if(c.compare(a1[j], a1[j+1])==1){
 					aux=a1[j];
 					a1[j]=a1[j+1];
