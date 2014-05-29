@@ -41,7 +41,7 @@ public class Fecha {
 		//validar dias y meses
 		
 		//comparador
-		public int comparteTo(Fecha f) {
+		public int compareTo(Fecha f) {
 			if(this.a>f.getA()){
 				return 1;
 			}else if (this.a<f.getA()){
