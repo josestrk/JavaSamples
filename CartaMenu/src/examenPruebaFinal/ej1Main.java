@@ -17,7 +17,7 @@ public class ej1Main {
 
 		Ej1Examenes e=new Ej1Examenes();
 		e.add(ex);e.add(ex2);e.add(ex3);e.add(ex4);
-		e.add(p);e.add(p2);e.add(p3);
+		e.add(p);e.add(p3);
 		
 		Ej1Examenes e2=new Ej1Examenes();
 		e2.add(p2);e2.add(ex5);e2.add(ex6);

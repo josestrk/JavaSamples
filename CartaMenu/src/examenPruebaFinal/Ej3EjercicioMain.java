@@ -2,6 +2,7 @@ package examenPruebaFinal;
 
 import java.io.FileWriter;
 import java.io.IOException;
+import java.util.Scanner;
 
 public class Ej3EjercicioMain {
 
@@ -34,16 +35,33 @@ public class Ej3EjercicioMain {
 		ef.add(g, e);
 		ef.add(g2, e2);
 		
+		System.out.println("Ordenar grupos del informe por: \n1.fecha\n2.Num Alumno\n3.Modulo Ordenar:");
+		Scanner src=new Scanner(System.in);
+		int op=src.nextInt();
+		
+		switch(op){
+		case 2:
+			CompareNumAlumnos c=new CompareNumAlumnos();
+			e.Ordenado(c);
+			break;
+		case 3:
+			CompararModulo c2=new CompararModulo();
+			e.Ordenado(c2);
+			break;
+		}
 		//abro flujo
+		String doc="ExamenesJunio.dat";
 		FileWriter escribir;
 		try{
-			escribir=new FileWriter("ExamenesJunio.dat");
+			escribir=new FileWriter(doc);
 		
 			escribir.write("___________________________________________________________________");
 			escribir.write("Grupos");
 			escribir.write("\n "+ef);
 			escribir.write("___________________________________________________________________");
 			escribir.close();
+			
+			System.out.println("Informe emitido correctamente a:"+doc);
 		}catch (IOException excep){
 			System.out.println(excep.getMessage());
 		}

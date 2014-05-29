@@ -27,7 +27,7 @@ public class Ej1ExamenesFinales {
 		Iterator it=this.calendario.keySet().iterator();
 		while( it.hasNext()){
 			Ej1Grupo clave=(Ej1Grupo)it.next();
-			s+= clave+":"+calendario.get(clave)+"\n";
+			s+= clave+":\n"+calendario.get(clave)+"\n";
 		}
 		return s;
 	}

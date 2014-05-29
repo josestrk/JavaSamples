@@ -16,7 +16,7 @@ public class CompareNumAlumnos implements Comparator {
 		}
 			return 1;
 		}catch (Exception e){
-			return 0;
+			return -1;
 		}
 	}
 	
