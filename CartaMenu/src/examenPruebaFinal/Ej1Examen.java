@@ -40,7 +40,7 @@ public class Ej1Examen implements Ej1Examinable,Comparable {
 	}
 	
 	public String toString(){
-		return "(+Examen+)\t"+numAlumnos+"-"+modulo+"-"+f+"-"+h;
+		return "(+Examen+)\t"+numAlumnos+"\t"+modulo+"\t"+f+"\t"+h;
 	}
 
 	@Override

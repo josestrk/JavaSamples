@@ -12,8 +12,9 @@ public class ComparaFecha implements Comparator {
 				return 1;
 			}else if(f.compareTo(f2)==-1){
 				return -1;
+			}else{
+				return new ComparaHora().compare(o1, o2);
 			}
-		return 0;
 	}
 	
 }

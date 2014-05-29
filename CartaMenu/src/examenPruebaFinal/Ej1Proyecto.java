@@ -27,7 +27,7 @@ public class Ej1Proyecto implements Ej1Examinable,Comparable {
 	}
 	
 	public String toString(){
-		String s="(-Proyecto-)"+titulo+"-"+f+"/"+h+"\t--";
+		String s="(-Proyecto-)\t\t"+titulo+"\t"+f+"\t"+h+"\t--";
 		for(int i=0;i<alumnos.length;i++){
 			s+=alumnos[i]+" | ";
 		}

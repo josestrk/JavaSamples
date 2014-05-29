@@ -14,12 +14,17 @@ public class Ej1Examenes implements Ej1Examinable{
 		examenes=new TreeSet(c);
 	}
 	
+	public void setExamenes(TreeSet examenes){
+		this.examenes=examenes;
+	}
+	
+	
 	public TreeSet getExamenes(){
 		return examenes;
 	}
 	
 	public void add(Ej1Examinable e){
-		examenes.add(e);
+		if(!examenes.add(e))System.out.println("no se introdujo "+e+" las horas coinciden con otro Examinable ya establecido para esa hora");;
 	}
 	
 	
@@ -47,14 +52,8 @@ public class Ej1Examenes implements Ej1Examinable{
 	
 	public void Ordenado(Comparator c){
 		TreeSet aux=new TreeSet(c);
-		aux.addAll(examenes);
-		examenes.addAll(aux);
-		
-		Iterator it=examenes.iterator();
-//		while(it.hasNext()){
-//			aux.add(it.next());
-//		}
-		
+		aux.addAll(this.getExamenes());
+		setExamenes(aux);
 	}
 
 	@Override
