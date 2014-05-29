@@ -1,27 +1,37 @@
 package examenPruebaFinal;
 
-public class Ej1Grupo {
+public class Ej1Grupo implements Comparable{
 	private String nombre;
-	private int numeroModulos;
+	private int numeroModulo;
 	
 	public Ej1Grupo(){
 		nombre="";
-		numeroModulos=0;
+		numeroModulo=0;
 	}
 	public Ej1Grupo(String nombre,int numeroModulos){
 		this.nombre=nombre;
-		this.numeroModulos=numeroModulos;
+		this.numeroModulo=numeroModulos;
 	}
 	
 	public String getNombre(){
 		return nombre;
 	}
 	
-	public int numeroModulos(){
-		return numeroModulos;
+	public int getNumeroModulos(){
+		return numeroModulo;
 	}
 	
 	public String toString(){
-		return nombre+" Numero Modulos:"+numeroModulos;
+		return nombre+" NºModulo:"+numeroModulo;
+	}
+	@Override
+	public int compareTo(Object o) {
+		Ej1Grupo e=(Ej1Grupo) o;
+		if(this.numeroModulo>e.getNumeroModulos()){
+			return 1;
+		}else if (this.numeroModulo<e.getNumeroModulos()){
+			return -1;
+		}
+		return 0;
 	}
 }

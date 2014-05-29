@@ -3,13 +3,13 @@ package examenPruebaFinal;
 import java.util.*;
 
 public class Ej1ExamenesFinales {
-	private HashMap<Ej1Grupo,Ej1Examenes> calendario;
+	private TreeMap<Ej1Grupo,Ej1Examenes> calendario;
 	
 	public Ej1ExamenesFinales(){
-		calendario=new HashMap<Ej1Grupo,Ej1Examenes>();
+		calendario=new TreeMap<Ej1Grupo,Ej1Examenes>();
 	}
 	
-	public HashMap getCalendario(){
+	public TreeMap getCalendario(){
 		return calendario;
 	}
 	
@@ -17,13 +17,17 @@ public class Ej1ExamenesFinales {
 		return calendario.get(grupo);
 	}
 	
+	public void add(Ej1Grupo k,Ej1Examenes v){
+		calendario.put(k, v);
+	}
+	
 	public String toString(){
 		String s="";
-		Set t=calendario.entrySet();
-		Iterator it=t.iterator();
 		
+		Iterator it=this.calendario.keySet().iterator();
 		while( it.hasNext()){
-			s+=it.next()+"\n";
+			Ej1Grupo clave=(Ej1Grupo)it.next();
+			s+= clave+":"+calendario.get(clave)+"\n";
 		}
 		return s;
 	}
