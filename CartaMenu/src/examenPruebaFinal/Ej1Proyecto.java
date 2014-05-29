@@ -47,19 +47,25 @@ public class Ej1Proyecto implements Ej1Examinable,Comparable {
 	public Fecha FechaprimerDia() {
 		return f;
 	}
-	
+
+	@Override
 	public int compareTo(Object o) {
-		//comparo por fecha y hora que es lo que implementa la interfaz
-		Ej1Proyecto p=(Ej1Proyecto) o;
-		
-		ComparaFecha c=new ComparaFecha();
-		int fe=c.compare(this.getF(), ((Ej1Proyecto)o).getF());
-		if(fe==0){
-			ComparaHora ho=new ComparaHora();
-			return ho.compare(this.getH(),p.getH());
-		}
-		return fe;
+		// TODO Auto-generated method stub
+		return 0;
 	}
 	
+//	public int compareTo(Object o) {
+//		//comparo por fecha y hora que es lo que implementa la interfaz
+//		Ej1Proyecto p=(Ej1Proyecto) o;
+//		
+//		ComparaFecha c=new ComparaFecha();
+//		int fe=c.compare(this.getF(), ((Ej1Proyecto)o).getF());
+//		if(fe==0){
+//			ComparaHora ho=new ComparaHora();
+//			return ho.compare(this.getH(),p.getH());
+//		}
+//		return fe;
+//	}
+
 	
 }

@@ -43,15 +43,21 @@ public class Ej1Examen implements Ej1Examinable,Comparable {
 		return "(+Examen+)\t"+numAlumnos+"-"+modulo+"-"+f+"-"+h;
 	}
 
+	@Override
 	public int compareTo(Object o) {
-		//comparo por fecha y hora que es lo que implementa la interfaz
-		Ej1Examen e=(Ej1Examen) o;
-		ComparaFecha c=new ComparaFecha();
-		int fe=c.compare(this.getF(), e.getF());
-		if(fe==0){
-			ComparaHora ho=new ComparaHora();
-			return ho.compare(this.getH(),e.getH());
-		}
-		return fe;
+		// TODO Auto-generated method stub
+		return 0;
 	}
+
+//	public int compareTo(Object o) {
+//		//comparo por fecha y hora que es lo que implementa la interfaz
+//		Ej1Examen e=(Ej1Examen) o;
+//		ComparaFecha c=new ComparaFecha();
+//		int fe=c.compare(this.getF(), e.getF());
+//		if(fe==0){
+//			ComparaHora ho=new ComparaHora();
+//			return ho.compare(this.getH(),e.getH());
+//		}
+//		return fe;
+//	}
 }

@@ -1,5 +1,6 @@
 package examenPruebaFinal;
 
+import java.util.Comparator;
 import java.util.Iterator;
 import java.util.TreeSet;
 
@@ -9,7 +10,8 @@ public class Ej1Examenes implements Ej1Examinable{
 	private TreeSet examenes;
 	
 	public Ej1Examenes(){
-		examenes=new TreeSet();
+		ComparaFecha c=new ComparaFecha();
+		examenes=new TreeSet(c);
 	}
 	
 	public TreeSet getExamenes(){
@@ -25,7 +27,7 @@ public class Ej1Examenes implements Ej1Examinable{
 		String s="";
 		Iterator it=examenes.iterator();
 		while(it.hasNext()){
-			s+=it.next();
+			s+=it.next()+"\n";
 		}
 		return s;
 	}
@@ -40,7 +42,30 @@ public class Ej1Examenes implements Ej1Examinable{
 
 	@Override
 	public Fecha FechaprimerDia() {
+		return ((Ej1Examinable)examenes.first()).FechaprimerDia();
+	}
+	
+	public void Ordenado(Comparator c){
+		TreeSet aux=new TreeSet(c);
+		aux.addAll(examenes);
+		examenes.addAll(aux);
+		
 		Iterator it=examenes.iterator();
-		return ((Ej1Examinable)it.next()).FechaprimerDia();
+//		while(it.hasNext()){
+//			aux.add(it.next());
+//		}
+		
+	}
+
+	@Override
+	public Fecha getF() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Hora getH() {
+		// TODO Auto-generated method stub
+		return null;
 	}
 }
