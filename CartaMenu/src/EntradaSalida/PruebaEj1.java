@@ -7,7 +7,7 @@ import java.io.IOException;
 public class PruebaEj1 {
 	/* Creamos un ficher de texto y lo copiamos en otro*/
 	public static void main(String arg[]){
-		String nombreArchivo = "prueba.txt";
+		String nombreArchivo = "ExamenesJunio.dat";
 		FileReader leer;
 		//estr flujo escribe en el nuevo fichero 
 		FileWriter escribir;
