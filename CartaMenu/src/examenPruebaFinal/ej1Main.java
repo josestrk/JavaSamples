@@ -11,13 +11,14 @@ public class ej1Main {
 		
 		String[] al={"ma","me","mi"};
 		String[] al2={"ma","me","mi","ma","me","mi","ma","me","mi","ma","me","mi","ma","me","mi"};
+		String[] al3={"ma","me","mi","ma","me","mi","ma","me","mi","ma"};
 		Ej1Proyecto p=new Ej1Proyecto(new Fecha(10,1,2013), new Hora(11, 30), "Meca",al);
-		Ej1Proyecto p2=new Ej1Proyecto(new Fecha(6,2,2013), new Hora(42, 30), "Meca",al2);
-		Ej1Proyecto p3=new Ej1Proyecto(new Fecha(1,1,2013), new Hora(12, 30), "Palo",al2);
+		Ej1Proyecto p2=new Ej1Proyecto(new Fecha(6,2,2013), new Hora(12, 50), "Meca",al2);
+		Ej1Proyecto p3=new Ej1Proyecto(new Fecha(1,1,2013), new Hora(12, 35), "Palo",al3);
 
 		Ej1Examenes e=new Ej1Examenes();
 		e.add(ex);e.add(ex2);e.add(ex3);e.add(ex4);
-		e.add(p);e.add(p3);
+		e.add(p);e.add(p3);e.add(p2);
 		
 		Ej1Examenes e2=new Ej1Examenes();
 		e2.add(p2);e2.add(ex5);e2.add(ex6);
@@ -29,14 +30,14 @@ public class ej1Main {
 		
 		System.out.println("____NumAlumno______");
 		CompareNumAlumnos c=new CompareNumAlumnos();
-		e.Ordenado(c);
+		e.ordenado(c);
 		System.out.println(e);
 		System.out.println("FIN");
 		
 		
 		System.out.println("____Modulo______");
 		CompararModulo c2=new CompararModulo();
-		e.Ordenado(c2);
+		e.ordenado(c2);
 		System.out.println(e);
 		System.out.println("FIN");
 		

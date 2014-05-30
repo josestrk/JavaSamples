@@ -42,11 +42,11 @@ public class Ej3EjercicioMain {
 		switch(op){
 		case 2:
 			CompareNumAlumnos c=new CompareNumAlumnos();
-			e.Ordenado(c);
+			e.ordenado(c);
 			break;
 		case 3:
 			CompararModulo c2=new CompararModulo();
-			e.Ordenado(c2);
+			e.ordenado(c2);
 			break;
 		}
 		//abro flujo

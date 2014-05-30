@@ -50,7 +50,7 @@ public class Ej1Examenes implements Ej1Examinable{
 		return ((Ej1Examinable)examenes.first()).FechaprimerDia();
 	}
 	
-	public void Ordenado(Comparator c){
+	public void ordenado(Comparator c){
 		TreeSet aux=new TreeSet(c);
 		aux.addAll(this.getExamenes());
 		setExamenes(aux);
@@ -64,6 +64,12 @@ public class Ej1Examenes implements Ej1Examinable{
 
 	@Override
 	public Hora getH() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public String getString() {
 		// TODO Auto-generated method stub
 		return null;
 	}

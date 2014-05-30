@@ -2,9 +2,9 @@ package examenPruebaFinal;
 
 
 public class Ej2EjercicioFuncion {
-	private static Ej2Cola c;
+	private Ej2Cola c;
 	
-	public static int extraer(int el){
+	public int extraer(int el){
 		Ej2Cola aux=new Ej2Cola();
 		int sel=0;
 		boolean sw=false;

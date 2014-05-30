@@ -16,7 +16,7 @@ public class Ej1Examen implements Ej1Examinable,Comparable {
 	
 	public int hayAlumnos() throws HayPocos {
 		if (numAlumnos>10){
-			return 0;
+			return numAlumnos;
 		}else{
 			throw new HayPocos();
 		}
@@ -35,7 +35,7 @@ public class Ej1Examen implements Ej1Examinable,Comparable {
 	public int getNumAlumnos(){
 		return numAlumnos;
 	}
-	public String getModulo(){
+	public String getString(){
 		return modulo;
 	}
 	

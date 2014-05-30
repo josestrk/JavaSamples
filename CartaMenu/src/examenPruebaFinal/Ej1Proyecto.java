@@ -19,7 +19,7 @@ public class Ej1Proyecto implements Ej1Examinable,Comparable {
 	public Hora getH(){
 		return h;
 	}
-	public String getTitulo(){
+	public String getString(){
 		return titulo;
 	}
 	public String[] getAlumnos(){
@@ -27,7 +27,7 @@ public class Ej1Proyecto implements Ej1Examinable,Comparable {
 	}
 	
 	public String toString(){
-		String s="(-Proyecto-)\t\t"+titulo+"\t"+f+"\t"+h+"\t--";
+		String s="(-Proyecto-)\t"+alumnos.length+"\t"+titulo+"\t"+f+"\t"+h+"\t--";
 		for(int i=0;i<alumnos.length;i++){
 			s+=alumnos[i]+" | ";
 		}
