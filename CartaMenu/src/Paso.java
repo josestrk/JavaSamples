@@ -4,7 +4,8 @@ public class Paso {
 	private Tiempo tiempoPreparacion;
 	
 	public Paso(){
-		
+		descripcion="xxx";
+		tiempoPreparacion=new Tiempo(1,1);
 	}
 	public Paso(String descrip, Tiempo tiempopre){
 		this.descripcion=descrip;
@@ -23,10 +24,10 @@ public class Paso {
 		return tiempoPreparacion;
 	}
 	
-	public void setTiempoPreparacion(Tiempo t){//echo x alex
-		this.tiempoPreparacion.setH(t.getH());//pones la hora de 'tiempo' desde el getter de el tiempo que te meten
-		this.tiempoPreparacion.setM(t.getM());//estableces los minutos con los getters ya que no se puede con iguales'='
+	public void setTiempoPreparacion(Tiempo t){
+		this.tiempoPreparacion=t;
 	}
+	
 	
 	
 }

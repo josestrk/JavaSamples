@@ -8,7 +8,7 @@ public class Tiempo {
 		m=0;
 	}
 	
-	public Tiempo(int h, int m, int s) {
+	public Tiempo(int h, int m) {
 		this.h=h;
 		this.m=m;
 	}
@@ -57,5 +57,20 @@ public class Tiempo {
 		if(m>=60 && m<0)
 			sw=false;
 		return sw;
+	}
+	//añadido por ejercicio 5
+	public int compareTo(Tiempo o2){
+		if(this.h>o2.h)
+			return 1;
+		else if (this.h<o2.h)
+			return -1;
+		else
+			if(this.m>o2.m){
+				return 1;
+			}else if(this.m<o2.m){
+				return -1;
+			}else
+				return 0;
+				
 	}
 }

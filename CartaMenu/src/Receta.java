@@ -46,7 +46,7 @@ public class Receta {
 	
 	public Tiempo tiempoTotal(){
 		Tiempo t=new Tiempo();
-		pasosPreparacion.TiempoTotal();
+		t=pasosPreparacion.TiempoTotal();
 		return t;
 	}
 }

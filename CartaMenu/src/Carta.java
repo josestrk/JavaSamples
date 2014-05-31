@@ -5,7 +5,7 @@ public class Carta {
 	private Map<DiaSemana,Menu> carta;
 	
 	public Carta(){
-		carta=new TreeMap();
+		carta=new HashMap();
 	}
 	
 	public void add(DiaSemana dia,Menu m){
@@ -28,19 +28,23 @@ public class Carta {
 		Iterator it=s.iterator();
 		
 		while(it.hasNext()){
-			t.suma(carta.get(((DiaSemana) it.next())).tiempoTotal());
+			t.suma(carta.get(  ((DiaSemana) it.next())   ).tiempoTotal());
 			cont++;
 		}
 		t.media(cont);
 		return t;
 	}
 	public double porcentajeVejetariano(DiaSemana dia){
-		double d = 0;
-		return d;
+		return carta.get(dia).isVegetariano();
 	}
 	
 	public double porcentajeVejetariano(){
 		double d = 0;
+		Set s= carta.keySet();
+		Iterator it=s.iterator();
+		while(it.hasNext()){
+			d+=porcentajeVejetariano((DiaSemana) it.next());
+		}
 		return d;
 	}
 	

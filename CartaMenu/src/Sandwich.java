@@ -11,7 +11,7 @@ public class Sandwich extends Receta implements FastFoodeable {
 	@Override
 	public Tiempo tiempoPreparacion() {
 		// Se establece este metodo por la interfaz fastfoodeable 'sinhacer's
-		return null;
+		return this.getPasosPreparacion().TiempoTotal();
 	}
 
 	@Override
@@ -23,7 +23,7 @@ public class Sandwich extends Receta implements FastFoodeable {
 	@Override
 	public Preparacion tipoPreparacion() {
 		// Se establece este metodo por la interfaz fastfoodeable 'sinhacer'
-		return null;
+		return Preparacion.CRUDO;
 	}
 	
 }

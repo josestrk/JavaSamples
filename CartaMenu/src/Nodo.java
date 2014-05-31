@@ -5,14 +5,7 @@ public class Nodo {
 	private Nodo sig;
 	
 	public Nodo(){
-		this.sig=null;
-		
 	}
-	public Nodo(Paso info) {
-		this.info = info;
-		this.sig = null;
-	}
-	
 	public Paso getInfo() {
 		return info;
 	}
