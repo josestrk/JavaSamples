@@ -35,7 +35,7 @@ public class ej3 implements Apilable{
 		pila=pila.getSig();
 		cima--;
 		return sacar;
-	}
+	} 
 	
 	public boolean isEmpty(){
 		if (cima==-1){
