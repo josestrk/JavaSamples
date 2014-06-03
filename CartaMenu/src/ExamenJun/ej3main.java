@@ -9,11 +9,10 @@ public class ej3main {
 		pila.push("tres");
 		pila.push("cuatr");
 		System.out.println(pila.size());
-		System.out.println(pila.pop());
-		System.out.println(pila.pop());
-		System.out.println(pila.pop());
+		while(!pila.isEmpty())
+			System.out.println(pila.pop());
 		System.out.println(pila.size());
-		System.out.println(pila.pop());
+		
 	}
 
 }

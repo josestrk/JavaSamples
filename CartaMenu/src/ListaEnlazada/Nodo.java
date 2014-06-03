@@ -18,10 +18,6 @@ public class Nodo {
 		return o;
 	}
 	
-	public void setO(Object o){
-		this.o=o;
-	}
-	
 	public Nodo getSig() {
 		return sig;
 	}
@@ -29,7 +25,6 @@ public class Nodo {
 	public void setSig(Nodo sig) {
 		this.sig=sig;
 	}
-	
 	public String toString(){
 		return " - "+o;
 	}

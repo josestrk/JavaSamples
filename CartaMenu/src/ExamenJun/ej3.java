@@ -1,5 +1,14 @@
 package ExamenJun;
 
+/**
+ * 
+ * @author jtrincadocastan
+ *
+ *
+ *
+ *
+ */
+
 public class ej3 implements Apilable{
 	private Nodo pila;
 	int cima;
@@ -15,14 +24,15 @@ public class ej3 implements Apilable{
 	
 	public void push(Object o){
 		Nodo aux = new Nodo(o);
-		aux.setSig(pila.getSig());
-		pila.setSig(aux);
+		aux.setSig(this.pila);
+		this.pila=aux;
 		cima++;
 	}
 	
 	public Object pop(){
-		Nodo sacar=pila;
-		pila.setSig(pila);
+		
+		Object sacar=pila.getO();
+		pila=pila.getSig();
 		cima--;
 		return sacar;
 	}
