@@ -18,6 +18,9 @@ public class mainEj1 {
 	
 	System.out.println(bib);
 	
+	System.out.println("ordenado");
+	System.out.println(bib.toStringOrd());
+	
 	System.out.println(bib.toStringNPres());
 	
 	}

@@ -4,36 +4,40 @@ public class Biblioteca {
 	private Nodo lista;
 	
 	public Biblioteca(){
-		lista=new Nodo();
+		lista=null;
 	}
 	public void add(Ordenable o){
 		Nodo aux=new Nodo(o);
 		aux.setSig(lista);
 		lista=aux;
 	}
+	
+	public void ordenar(){
+		Nodo orden=lista;
+		Nodo orden2=lista;
+		Ordenable aux;
+		while(orden.getSig()!=null){//como ordenas una lista enlazada
+			orden2=orden.getSig();
+			while(orden2!=null){
+				if(   orden.getO().ordenar()  >  orden2.getO().ordenar()   ){
+					aux=orden.getO();
+					orden.setO(orden2.getO());
+					orden2.setO(aux);
+				}
+				orden2=orden2.getSig();
+			}
+			orden=orden.getSig();
+		}
+	}
+	
 	public String toString(){
 		String s="";
 		Nodo listaA=lista;
-		while(listaA.getSig()!=null){
+		while(listaA!=null){
 			s+="\n"+listaA.getO().toString();
 			listaA=listaA.getSig();
 		}
 		return s;
-	}
-	public void ordenar(){
-		Nodo orden=lista;
-		Nodo aux=new Nodo();
-		while(orden.getSig()!=null){//como ordenas una lista enlazada
-			if(orden.getO().ordenar()>orden.getSig().getO().ordenar()){
-				aux=lista.getSig();
-				lista.setSig(lista.getSig().getSig());
-				lista.getSig().setSig(aux);
-				orden=orden.getSig();
-			}else{
-				orden=orden.getSig();
-			}
-		}
-		lista=orden;
 	}
 	public String toStringOrd(){
 		ordenar();
