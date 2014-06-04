@@ -1,6 +1,8 @@
 package examenPruebaFinal;
 
-public class Hora implements Comparable {
+import java.io.Serializable;
+
+public class Hora implements Comparable,Serializable {
 	private int h;
 	private int m;
 	

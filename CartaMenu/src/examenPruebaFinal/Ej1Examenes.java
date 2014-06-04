@@ -1,12 +1,13 @@
 package examenPruebaFinal;
 
+import java.io.Serializable;
 import java.util.Comparator;
 import java.util.Iterator;
 import java.util.TreeSet;
 
 import ejemplosTreeSetyMap.Producto;
 
-public class Ej1Examenes implements Ej1Examinable{
+public class Ej1Examenes implements Ej1Examinable,Serializable{
 	private TreeSet examenes;
 	
 	public Ej1Examenes(){

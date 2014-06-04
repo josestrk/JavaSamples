@@ -1,6 +1,8 @@
 package examenPruebaFinal;
 
-public class Ej1Grupo implements Comparable{
+import java.io.Serializable;
+
+public class Ej1Grupo implements Comparable,Serializable{
 	private String nombre;
 	private int numeroModulo;
 	

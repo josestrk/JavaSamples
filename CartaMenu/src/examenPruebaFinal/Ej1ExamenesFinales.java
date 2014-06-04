@@ -1,8 +1,9 @@
 package examenPruebaFinal;
 
+import java.io.Serializable;
 import java.util.*;
 
-public class Ej1ExamenesFinales {
+public class Ej1ExamenesFinales implements Serializable {
 	private TreeMap<Ej1Grupo,Ej1Examenes> calendario;
 	
 	public Ej1ExamenesFinales(){

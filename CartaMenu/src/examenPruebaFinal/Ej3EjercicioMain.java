@@ -1,7 +1,12 @@
 package examenPruebaFinal;
 
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.io.ObjectInputStream;
+import java.io.ObjectOutputStream;
 import java.util.Scanner;
 
 public class Ej3EjercicioMain {
@@ -50,20 +55,38 @@ public class Ej3EjercicioMain {
 			break;
 		}
 		//abro flujo
-		String doc="ExamenesJunio.dat";
-		FileWriter escribir;
-		try{
-			escribir=new FileWriter(doc);
+		String doc="ExamenesJunio.txt";
 		
-			escribir.write("___________________________________________________________________");
-			escribir.write("Grupos");
-			escribir.write("\n "+ef);
-			escribir.write("___________________________________________________________________");
-			escribir.close();
+		try{
+			ObjectOutputStream eo=new ObjectOutputStream(new FileOutputStream(doc));
+			
+			eo.writeObject(ex2);
+			
+			eo.close();
 			
 			System.out.println("Informe emitido correctamente a:"+doc);
 		}catch (IOException excep){
 			System.out.println(excep.getMessage());
+		}
+		
+		try {
+			ObjectInputStream io=new ObjectInputStream(new FileInputStream(doc));
+			boolean sw=false;	
+				do
+				{
+					try {
+					System.out.println(io.readObject().toString());
+					} catch (ClassNotFoundException e1) {
+						sw=false;
+					}
+				}while(sw);
+					
+		}catch (FileNotFoundException e1) {
+			// TODO Auto-generated catch block
+			e1.printStackTrace();
+		} catch (IOException e1) {
+			// TODO Auto-generated catch block
+			e1.printStackTrace();
 		}
 		
 		

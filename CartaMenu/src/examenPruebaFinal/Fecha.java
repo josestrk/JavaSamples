@@ -1,7 +1,9 @@
 package examenPruebaFinal;
 
+import java.io.Serializable;
 
-public class Fecha implements Comparable {
+
+public class Fecha implements Comparable,Serializable {
 	int a,m,d;
 	public Fecha(){
 		d=0;m=0;a=0;

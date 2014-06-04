@@ -1,6 +1,8 @@
 package examenPruebaFinal;
 
-public class Ej1Proyecto implements Ej1Examinable,Comparable {
+import java.io.Serializable;
+
+public class Ej1Proyecto implements Ej1Examinable,Comparable,Serializable {
 	private Fecha f;
 	private Hora h;
 	private String titulo;
