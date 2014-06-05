@@ -45,20 +45,19 @@ public class ClaseListaEnlazada {
 	}
 	//otro que se las trae
 	public boolean borrar( Object o){
-		Nodo recorrete=new Nodo();
-		recorrete=inicio.getSig();
+		Nodo recorrete=inicio;
+		Nodo aux= new Nodo();
+		boolean sw = false;
 		while(recorrete!=null){// asi entra en el ultimo
-			if(recorrete.getSig().getO()==o){
+			if(recorrete.getO()!=o){
 				//borrar
-				Nodo aux= new Nodo(o);
 				aux.setSig(recorrete.getSig());
-				recorrete.setSig(aux);
-				return true;
+				sw=true;
 			}
 			recorrete=recorrete.getSig();
 		}
 		
-		return false;
+		return sw;
 	}
 	
 	public boolean equals(ClaseListaEnlazada c){
@@ -71,7 +70,7 @@ public class ClaseListaEnlazada {
 	public int size(){
 		int c=0;
 		Nodo recorrete=new Nodo();
-		recorrete=inicio.getSig();
+		recorrete=inicio;
 		while(recorrete!=null){
 			recorrete=recorrete.getSig();
 			c++;
