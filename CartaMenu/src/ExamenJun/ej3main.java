@@ -8,11 +8,14 @@ public class ej3main {
 		pila.push("dos");
 		pila.push("tres");
 		pila.push("cuatr");
+
 		System.out.println(pila.size());
 		while(!pila.isEmpty())
 			System.out.println(pila.pop());
+		
+		
+		
 		System.out.println(pila.size());
 		
 	}
-
 }
